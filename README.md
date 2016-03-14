@@ -33,8 +33,8 @@ Todo ambiente é instalado e configurado via Puppet 4.
 
 ## Autores
 
-Guto Carvalho (gutocarvalho@gmail.com)
-Miguel Di Ciurcio Filho (miguel.filho@gmail.com)
+* Guto Carvalho (gutocarvalho@gmail.com)
+* Miguel Di Ciurcio Filho (miguel.filho@gmail.com)
 
 ## Contribuidores
 
@@ -59,8 +59,8 @@ Você precisa ter pelo menos 4 GB de RAM livre para subir as VMs.
     vagrant plugin install vagrant-hosts
     vagrant plugin install vagrant-hostupdater
     vagrant box add gutocarvalho/centos7x64
-    git clone https://github.com/gutocarvalho/puc.git
-    cd puc
+    git clone https://github.com/gutocarvalho/pcp.git
+    cd pcp
     vagrant up
 
 ## Ambiente
@@ -71,33 +71,33 @@ Existem 3 VMs no ambiente
 * puppetdb.hacklab, 192.168.250.25
 * puppetmq.hacklab, 192.168.250.30
 
-### puppetserver
+### ambiente::puppetserver
 
 Nesta VM será instalado o puppet server 2.1.2, puppet agent 1.3.5.
 
-### puppetdb
+### ambiente::puppetdb
 
 Nesta VM será instalado o puppetdb 3.2.4, postgresql 9.4.6, puppet agent 1.3.5.
 
-### puppetmq
+### ambiente::puppetmq
 
 Nesta VM será instalado o activemq 5.9 e puppet agent 1.3.5.
 
 ## Uso
 
-### puppetserver
+### uso::puppetserver
 
 acessando a vm
 
     vagrant ssh puppetserver
 
-### puppetdb
+### uso::puppetdb
 
 acessando a vm
 
     vagrant ssh puppetdb
 
-### puppetmq
+### uso::puppetmq
 
 acessando a vm
 
