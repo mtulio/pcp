@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # puppet agent + puppetdb + puppet explorer
   config.vm.define "puppetdb" do |puppetdb|
     puppetdb.vm.hostname = "puppetdb.hacklab"
-    puppetdb.vm.box = "gutocarvalh/centos7x64"
+    puppetdb.vm.box = "gutocarvalho/centos7x64"
     puppetdb.vm.network :private_network, ip: "192.168.250.25"
     puppetdb.vm.provider "virtualbox" do |v|
       v.customize [ "modifyvm", :id, "--cpus", "2" ]
