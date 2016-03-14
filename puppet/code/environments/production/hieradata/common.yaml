@@ -1,0 +1,23 @@
+profiles::puppet::r10k_version: '2.0.3'
+
+profiles::puppet::agent::puppetmaster: 'puppetserver.hacklab'
+
+profiles::puppet::master::autosign: true
+profiles::puppet::master::puppetdb_server: 'puppetdb.hacklab'
+
+profiles::puppetdb::database_hostname: 'puppetdb.hacklab'
+profiles::puppetdb::puppetdb_server_hostname: 'puppetdb.hacklab'
+profiles::puppetdb::total_nodes: 1000
+profiles::puppetdb::node_ttl: '30d'
+profiles::puppetdb::report_ttl: '1460d'
+profiles::puppetdb::store_usage: 15000
+profiles::puppetdb::temp_usage: 10000
+profiles::puppetdb::statements_cache_size: 0
+
+profiles::activemq::mco_password: 'u2rDUsy4hY240dl'
+
+profiles::mcollective::broker_host: 'puppetmq.hacklab'
+profiles::mcollective::broker_port: '61614'
+profiles::mcollective::broker_user: 'mcollective'
+profiles::mcollective::broker_password: 'u2rDUsy4hY240dl'
+profiles::mcollective::mco_loglevel: 'info'
