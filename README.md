@@ -20,6 +20,8 @@
 
 O projeto PCP tem o objetivo de oferecer um ambiente virtual Puppet completo para testes e desenvolvimento de módulos Puppet.
 
+Usando esse Vagrantfile subir o Puppet se torna uma tarefa simples e rápida.
+
 ## Tecnologias
 
 * Puppet Server 2.1.2
@@ -57,7 +59,7 @@ Você precisa ter pelo menos 4 GB de RAM livre para subir as VMs.
 ## Setup
 
     vagrant plugin install vagrant-hosts
-    vagrant plugin install vagrant-hostupdater
+    vagrant plugin install vagrant-hostsupdater
     vagrant box add gutocarvalho/centos7x64
     git clone https://github.com/gutocarvalho/pcp.git
     cd pcp
