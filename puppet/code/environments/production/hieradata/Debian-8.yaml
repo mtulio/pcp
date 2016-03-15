@@ -7,4 +7,4 @@ profiles::puppetdb::version: '3.2.4-1puppetlabs1'
 profiles::puppetdb::postgres_package_version: '9.4.6-1.pgdg80+1'
 profiles::puppetdb::postgres_version: '9.4'
 
-profiles::puppetexplorer::version: '2.0.0-1'
+profiles::puppetexplorer::version: '2.0.0-62'
