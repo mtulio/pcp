@@ -52,6 +52,7 @@ Este projeto foi testado com boxes CentOS 7.
 * Vagrant >= 1.8
   * plugin vagrant-hostsupdater (atua no host)
   * plugin vagrant-hosts (atua no guest)
+  * plugin vagrant-proxyconf (caso necessite e esteja atrás de proxy)
 * Box gutocarvalho/centos7x64
 
 Você precisa ter pelo menos 4 GB de RAM livre para subir as VMs.
