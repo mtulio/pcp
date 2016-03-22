@@ -66,6 +66,23 @@ Você precisa ter pelo menos 4 GB de RAM livre para subir as VMs.
     cd pcp
     vagrant up
 
+### Proxy Setup
+
+Para o caso de estar atrás de um serviço proxy:
+
+1. instale o plugin para proxy
+
+  ```
+  vagrant plugin install vagrant-proxyconf
+  ```
+
+1. altere as configurações no ```Vagrantfile``` (linhas 11 e 12) de acordo com o seu serviço de proxy
+
+  ```
+  config.proxy.http     = "http://10.122.19.54:5865"
+  config.proxy.https    = "http://10.122.19.54:5865"
+  ```
+
 ## Ambiente
 
 Existem 3 VMs no ambiente
