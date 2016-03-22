@@ -151,18 +151,7 @@ O Mcollective client foi instalado na vm puppetmq.hacklab, você pode acessar a 
 
 ## PuppetExplorer
 
-Se desejar ativar o puppet explorer, após rodar o setup pela primeira vez, edite o arquivo puppetdb.pp na vm puppetserver.hacklab e descomente a linha frontend.
-
-    /etc/puppetlabs/code/environments/production/site/role/manifests/puppetdb.pp
-
-Depois disto vá até a VM puppetdb.hacklab e chame o puppet agent duas vezes
-
-    vagrant ssh puppetdb.hacklab
-    sudo -i
-    puppet agent -t
-    puppet agent -t
-
-Ingore o erro no final da primeira execução. Após a conclusão, abra seu navegador e acesse a url
+Acesse o puppet explorer através da URL
 
     https://puppetdb.hacklab
 
