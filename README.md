@@ -40,7 +40,8 @@ Todo ambiente é instalado e configurado via Puppet 4.
 
 ## Contribuidores
 
-Seja um contribuidor, envie seu PR.
+* Adriano Vieira
+* Lauro Silveira
 
 ## Compatibilidade
 
