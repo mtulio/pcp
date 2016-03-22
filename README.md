@@ -167,11 +167,3 @@ Ingore o erro no final da primeira execução. Após a conclusão, abra seu nave
     https://puppetdb.hacklab
 
 Aceite o certificado, se possível use firefox ou chrome.
-
-## Debian 8
-
-Você pode utilizar a box gutocarvalho/debian8 na vm puppetserver e puppetdb se desejar.
-
-Infelizmente na puppetmq não foi possível rodar o activeMQ em Debian 8, isto ocorre devido a versão muito antiga do pacote no repositório Debian.
-
-A Puppet Labs empacota o ActiveMQ para EL mas ainda não o faz para Debian.
