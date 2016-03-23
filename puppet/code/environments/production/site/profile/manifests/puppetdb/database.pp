@@ -1,16 +1,18 @@
 class profile::puppetdb::database {
 
-  $puppetdb_server_hostname = hiera('profiles::puppetdb::puppetdb_server_hostname')
   $postgres_version = hiera('profiles::puppetdb::postgres_version')
   $postgres_package_version = hiera('profiles::puppetdb::postgres_package_version')
 
-  include ::puppetdb::params
+  $puppetdb_pg_name = hiera('profiles::puppetdb::pgconf::name')
+  $puppetdb_pg_user = hiera('profiles::puppetdb::pgconf::user')
+  $puppetdb_pg_pass = hiera('profiles::puppetdb::pgconf::pass')
+  $puppetdb_pg_host = hiera('profiles::puppetdb::pgconf::host')
 
   class { 'postgresql::globals':
     encoding            => 'UTF-8',
     locale              => 'en_US.UTF-8',
-    manage_package_repo => true,
     version             => $postgres_version,
+    manage_package_repo => true,
   }
 
   class {'postgresql::server':
@@ -25,16 +27,16 @@ class profile::puppetdb::database {
       value => '64'
   }
 
-  postgresql::server::db {$::puppetdb::params::database_name:
-    user     => $::puppetdb::params::database_username,
-    password => postgresql_password($::puppetdb::params::database_username, $::puppetdb::params::database_password)
+  postgresql::server::db { $puppetdb_pg_name:
+    user     => $puppetdb_pg_user,
+    password => postgresql_password($puppetdb_pg_user, $puppetdb_pg_pass)
   }
 
   postgresql::server::pg_hba_rule {'access for the puppetdb service':
     type        => 'host',
-    database    => $::puppetdb::params::database_name,
-    user        => $::puppetdb::params::database_username,
+    database    => $puppetdb_pg_name,
+    user        => $puppetdb_pg_user,
     auth_method => 'md5',
-    address     => $puppetdb_server_hostname,
+    address     => $puppetdb_pg_host,
   }
 }
