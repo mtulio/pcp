@@ -26,7 +26,7 @@ Usando esse Vagrantfile subir o Puppet se torna uma tarefa simples e rápida.
 
 * Puppet Server 2.1.2
 * PuppetDB 3.2.4
-* Puppet Agent 1.3.5
+* Puppet Agent 1.4.0
 * PostgreSQL 9.4.6
 * Puppet Explorer 2.0.0
 * ActiveMQ 5.9
@@ -77,15 +77,15 @@ Existem 3 VMs no ambiente
 
 ### ambiente::puppetserver
 
-Nesta VM será instalado o puppet server 2.1.2, puppet agent 1.3.5.
+Nesta VM será instalado o puppet server 2.1.2, puppet agent 1.4.0.
 
 ### ambiente::puppetdb
 
-Nesta VM será instalado o puppetdb 3.2.4, postgresql 9.4.6, puppet agent 1.3.5.
+Nesta VM será instalado o puppetdb 3.2.4, postgresql 9.4.6, puppet agent 1.4.0.
 
 ### ambiente::puppetmq
 
-Nesta VM será instalado o activemq 5.9 e puppet agent 1.3.5.
+Nesta VM será instalado o activemq 5.9 e puppet agent 1.4.0.
 
 ## Uso
 
@@ -157,3 +157,5 @@ Acesse o puppet explorer através da URL
     https://puppetdb.hacklab
 
 Aceite o certificado, se possível use firefox ou chrome.
+
+Rode o agente algumas vezes em cada nó para visualizar mais informações no dashboard.
