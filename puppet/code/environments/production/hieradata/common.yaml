@@ -7,12 +7,18 @@ profiles::puppet::master::puppetdb_server: 'puppetdb.hacklab'
 
 profiles::puppetdb::database_hostname: 'puppetdb.hacklab'
 profiles::puppetdb::puppetdb_server_hostname: 'puppetdb.hacklab'
-profiles::puppetdb::total_nodes: 1000
-profiles::puppetdb::node_ttl: '30d'
-profiles::puppetdb::report_ttl: '1460d'
+
+profiles::puppetdb::pgconf::name: 'puppetdb'
+profiles::puppetdb::pgconf::user: 'puppetdb'
+profiles::puppetdb::pgconf::pass: '2k3ZNQLGbbWdsU'
+profiles::puppetdb::pgconf::host: 'puppetdb.hacklab'
+
+profiles::puppetdb::node_ttl: '14d'
+profiles::puppetdb::report_ttl: '356d'
 profiles::puppetdb::store_usage: 15000
 profiles::puppetdb::temp_usage: 10000
 profiles::puppetdb::statements_cache_size: 0
+profiles::puppetdb::java_heap_mem: '256'
 
 profiles::activemq::mco_password: 'u2rDUsy4hY240dl'
 
