@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
     puppetserver.vm.provider "virtualbox" do |v|
       v.customize [ "modifyvm", :id, "--cpus", "2" ]
-      v.customize [ "modifyvm", :id, "--memory", "2048" ]
+      v.customize [ "modifyvm", :id, "--memory", "1024" ]
     end
   end
 
@@ -37,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppetdb.vm.network :private_network, ip: "192.168.250.25"
     puppetdb.vm.provider "virtualbox" do |v|
       v.customize [ "modifyvm", :id, "--cpus", "2" ]
-      v.customize [ "modifyvm", :id, "--memory", "1024" ]
+      v.customize [ "modifyvm", :id, "--memory", "512" ]
     end
     puppetdb.vm.provision :hosts do |provisioner|
       provisioner.autoconfigure = true
@@ -57,7 +57,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppetmq.vm.network :private_network, ip: "192.168.250.30"
     puppetmq.vm.provider "virtualbox" do |v|
       v.customize [ "modifyvm", :id, "--cpus", "2" ]
-      v.customize [ "modifyvm", :id, "--memory", "1024" ]
+      v.customize [ "modifyvm", :id, "--memory", "512" ]
     end
     puppetmq.vm.provision :hosts do |provisioner|
       provisioner.autoconfigure = true
