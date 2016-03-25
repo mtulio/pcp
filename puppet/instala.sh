@@ -1,31 +1,52 @@
 #!/bin/bash
 
+CONTROL_REPO="https://github.com/gutocarvalho/pcp-controlrepo.git"
+
 # limpando diretorios
-rm -rf /etc/puppetlabs/code
+rm -rf /etc/puppetlabs/code/*
 rm -rf /etc/puppetlabs/puppet/ssl
 
-# sincronizando diretorio code
-rsync -av /vagrant/puppet/code /etc/puppetlabs/
+# definindo locale
+export LC_ALL='en_US.UTF-8'
 
-# instala modulos forge
-puppet module install puppetlabs/apache -v 1.7.1
-puppet module install puppetlabs/vcsrepo
-puppet module install puppetlabs/puppetdb
-puppet module install puppetlabs/postgresql
-puppet module install puppetlabs/stdlib
-puppet module install puppetlabs/concat
-puppet module install puppetlabs/firewall
-puppet module install puppetlabs/java
-puppet module install puppetlabs/java_ks
-puppet module install spotify/puppetexplorer
-puppet module install hunner/hiera
+# apagando certificados
+rm -rf /etc/puppetlabs/puppet/ssl
 
-# instala modulos instruct
-cd /etc/puppetlabs/code/environments/production/modules
-git clone https://bitbucket.org/instruct/puppet-activemq.git activemq
-git clone https://bitbucket.org/instruct/puppet-mcollective.git mcollective
-git clone https://bitbucket.org/instruct/puppet-puppet puppet
-git clone https://bitbucket.org/instruct/puppet-developer.git puppet_developer
+# instalando r10k
+/opt/puppetlabs/puppet/bin/gem install --no-ri --no-rdoc r10k
 
-# chama puppet
+# configurando hieradata
+cat > /etc/puppetlabs/code/hiera.yaml <<EOF
+---
+:backends:
+  - yaml
+:hierarchy:
+  - "nodes/%{::trusted.certname}"
+  - "%{::operatingsystem}-%{::operatingsystemmajrelease}"
+  - "%{::osfamily}-%{::operatingsystemmajrelease}"
+  - "%{::osfamily}"
+  - common
+
+:yaml:
+# - /etc/puppetlabs/code/environments/%{environment}/hieradata on *nix
+# - %CommonAppData%\PuppetLabs\code\environments\%{environment}\hieradata on Windows
+# When specifying a datadir, make sure the directory exists.
+  :datadir:
+EOF
+
+# configurando r10k
+mkdir -p /etc/puppetlabs/r10k
+cat > /etc/puppetlabs/r10k/r10k.yaml <<EOF
+---
+:cachedir: /opt/puppetlabs/server/data/puppetserver/r10k
+:sources:
+  puppet:
+    basedir: /etc/puppetlabs/code/environments
+    remote: $CONTROL_REPO
+EOF
+
+# deploy do environment
+/opt/puppetlabs/puppet/bin/r10k deploy environment production -v debug --puppetfile
+
+# chama o puppet
 puppet apply /etc/puppetlabs/code/environments/production/manifests/site.pp
