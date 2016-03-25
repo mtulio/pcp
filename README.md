@@ -126,11 +126,17 @@ acessando a vm
 
 ## Estrutura
 
-O diretório code da raiz contém a estrutura abaixo
+Este projeto utiliza o repositório pcp-controlrepo como source para o r10k instalar
+o environment production que será utilizado pelo puppet para configurar as VMs.
+
+    https://github.com/gutocarvalho/pcp-controlrepo
+
+O environment trazido deste repositório contém os arquivos abaixo
 
 ```
 - environments
 - - production
+- - - Puppetfile
 - - - environment.conf
 - - - hieradata
 - - - - Debian-8.yaml
@@ -152,6 +158,8 @@ O diretório code da raiz contém a estrutura abaixo
 - - - - - - - app.pp
 - - - - - - - database.pp
 - - - - - - - frontend.pp
+- - - - - - activemq.pp
+- - - - - - ntp.pp
 - - - - role
 - - - - - manifests
 - - - - - - broker.pp
