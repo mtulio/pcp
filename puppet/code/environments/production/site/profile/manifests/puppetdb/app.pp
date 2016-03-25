@@ -2,7 +2,7 @@ class profile::puppetdb::app {
 
   $puppetdb_version = hiera('profiles::puppetdb::version')
 
-  $database_hostname = hiera('profiles::puppetdb::database_hostname')
+  $database_hostname = hiera('profiles::puppetdb::database_server_hostname')
   $database_username = hiera('profiles::puppetdb::pgconf::user')
   $database_password = hiera('profiles::puppetdb::pgconf::pass')
 

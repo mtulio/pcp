@@ -5,7 +5,7 @@ profiles::puppet::agent::puppetmaster: 'puppetserver.hacklab'
 profiles::puppet::master::autosign: true
 profiles::puppet::master::puppetdb_server: 'puppetdb.hacklab'
 
-profiles::puppetdb::database_hostname: 'puppetdb.hacklab'
+profiles::puppetdb::database_server_hostname: 'puppetdb.hacklab'
 profiles::puppetdb::puppetdb_server_hostname: 'puppetdb.hacklab'
 
 profiles::puppetdb::pgconf::name: 'puppetdb'
