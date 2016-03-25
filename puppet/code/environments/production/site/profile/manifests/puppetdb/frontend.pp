@@ -1,5 +1,7 @@
 class profile::puppetdb::frontend  {
 
+  include profile::puppetdb::apache
+
   $puppetexplorer_version = hiera('profiles::puppetexplorer::version')
 
   class { 'puppetexplorer':
