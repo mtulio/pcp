@@ -139,6 +139,8 @@ O environment trazido deste repositório contém os arquivos abaixo
 - - - Puppetfile
 - - - environment.conf
 - - - hieradata
+- - - - nodes
+- - - - - puppet-pcpm.hacklab.yaml
 - - - - Debian-8.yaml
 - - - - RedHat-7.yaml
 - - - - common.yaml
@@ -165,7 +167,9 @@ O environment trazido deste repositório contém os arquivos abaixo
 - - - - - - broker.pp
 - - - - - - puppetdb.pp
 - - - - - - puppetmaster.pp
+- - - - - - pcpm.pp
 ```
+
 
 ## Mcollective
 
