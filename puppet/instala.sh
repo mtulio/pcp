@@ -8,7 +8,7 @@ rm -rf /etc/puppetlabs/puppet/ssl
 rsync -av /vagrant/puppet/code /etc/puppetlabs/
 
 # instala modulos forge
-puppet module install puppetlabs/apache -v 1.6.0
+puppet module install puppetlabs/apache -v 1.7.1
 puppet module install puppetlabs/vcsrepo
 puppet module install puppetlabs/puppetdb
 puppet module install puppetlabs/postgresql
