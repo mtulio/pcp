@@ -20,13 +20,13 @@
 
 O projeto PCP tem o objetivo de oferecer um ambiente virtual Puppet completo para testes e desenvolvimento de módulos Puppet.
 
-Usando esse Vagrantfile subir o Puppet se torna uma tarefa simples e rápida.
+Usando esse Vagrantfile, subir o Puppet se torna uma tarefa simples e rápida.
 
 ## Tecnologias
 
 * Puppet Server 2.1.2
 * PuppetDB 3.2.4
-* Puppet Agent 1.4.0
+* Puppet Agent 1.4.1
 * PostgreSQL 9.4.6
 * Puppet Explorer 2.0.0
 * ActiveMQ 5.9
@@ -45,7 +45,7 @@ Todo ambiente é instalado e configurado via Puppet 4.
 
 ## Compatibilidade
 
-Este projeto foi testado com boxes CentOS 7.
+Este projeto foi testado com vagrant boxes CentOS 7
 
 ## Requisitos
 
@@ -56,7 +56,7 @@ Este projeto foi testado com boxes CentOS 7.
   * plugin vagrant-proxyconf (caso necessite e esteja atrás de proxy)
 * Box gutocarvalho/centos7x64
 
-Você precisa ter pelo menos 4 GB de RAM livre para subir as VMs.
+Você precisa ter pelo menos 2 GB de RAM livre para subir as VMs.
 
 ## Setup
 
@@ -77,7 +77,7 @@ Para o caso de estar atrás de um serviço proxy:
   vagrant plugin install vagrant-proxyconf
   ```
 
-1. altere as configurações no ```Vagrantfile``` (linhas 11 e 12) de acordo com o seu serviço de proxy
+2. altere as configurações no ```Vagrantfile``` (linhas 11 e 12) de acordo com o seu serviço de proxy
 
   ```
   config.proxy.http     = "http://10.122.19.54:5865"
@@ -94,15 +94,15 @@ Existem 3 VMs no ambiente
 
 ### ambiente::puppetserver
 
-Nesta VM será instalado o puppet server 2.1.2, puppet agent 1.4.0.
+Nesta VM será instalado o puppet server 2.1.2, puppet agent 1.4.1.
 
 ### ambiente::puppetdb
 
-Nesta VM será instalado o puppetdb 3.2.4, postgresql 9.4.6, puppet agent 1.4.0.
+Nesta VM será instalado o puppetdb 3.2.4, postgresql 9.4.6, puppet agent 1.4.1.
 
 ### ambiente::puppetmq
 
-Nesta VM será instalado o activemq 5.9 e puppet agent 1.4.0.
+Nesta VM será instalado o activemq 5.9 e puppet agent 1.4.1.
 
 ## Uso
 
