@@ -60,12 +60,19 @@ Você precisa ter pelo menos 2 GB de RAM livre para subir as VMs.
 
 ## Setup
 
-    vagrant plugin install vagrant-hosts
-    vagrant plugin install vagrant-hostsupdater
-    vagrant box add gutocarvalho/centos7x64
-    git clone https://github.com/gutocarvalho/pcp.git
-    cd pcp
-    vagrant up
+    [1] $ vagrant plugin install vagrant-hosts
+    [2] $ vagrant plugin install vagrant-hostsupdater
+    [3] $ vagrant box add gutocarvalho/centos7x64
+    [4] $ git clone https://github.com/gutocarvalho/pcp.git
+    [5] $ cd pcp
+    [6] $ vagrant up
+
+NOTE:
+*  If you have find some errors on step [3] like 'HTTP server doesn't seem to support byte 
+ranges. Cannot resume', try to continue download with option '-c':
+```shell
+    vagrant box add -c gutocarvalho/centos7x64 
+```
 
 ### Proxy Setup
 
