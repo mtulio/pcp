@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.0.2
-- Translate README to English [#9]
+- Translate [README](#9) and [CHANGELOG](#10) to English
 
 ## 1.0.1
 - R10k Support
