@@ -1,29 +1,31 @@
-q# PCP - Puppet Configuration Platform
+# PCP - Puppet Configuration Platform
 
 PCP project provides an completely Puppet 4x Platform installed and configured to be used as you want (labs, tests and modules development)!
 
 ## Table of Contents
 * [Overview](#overview)
-* [Description](#Description)
-* [Technologies](#Technologies)
-* [Compatibility](#Compatibility)
-* [Requirement](#Requirement)
-* [Environment](#Environment)
- * [Virtual Machines](#Virtual-Machines)
- * [Structure](#Structure)
-* [Setup](#Setup)
+* [Description](#description)
+* [Technologies](#technologies)
+* [Compatibility](#compatibility)
+* [Requirement](#requirement)
+* [Environment](#environment)
+ * [Virtual Machines](#virtual-machines)
+  * [Puppet Server](#puppetserver-puppet-server)
+  * [Puppet Explorer](#puppetserver-puppet-explorer)
+  * [Puppet Mcollective](#puppetserver-mcollective)
+ * [Structure](#structure)
+* [Setup](#setup)
  * [Vagrant requirements](#vagrant-requirements)
  * [Initial configuration](#initial-configuration)
 * [Usage](#usage)
  * [Puppet Server](#puppet-server)
  * [Puppet Explorer](#puppetdb)
- * [Mcollective](#activemq)
+ * [Mcollective](#puppetmq)
 * [License](#license)
 * [Development](#development)
 * [Credits](#credits)
  * [Author](#authors)
  * [Contributors](#contributors)
-
 
 ## Overview
 
@@ -37,7 +39,7 @@ Using this Vagrant configuration file (Vagrantfile) the tasks to setup up a comp
 
 Try it and contribute with us!
 
-## Technology
+## Technologies
 
 The following technologies is used:
 * Puppet Server 2.1.2
@@ -76,7 +78,7 @@ The environment is composed basically with three virtual machines:
 * puppetdb: puppetdb.hacklab (192.168.250.25)
 * puppetmq: puppetmq.hacklab (192.168.250.30)
 
-#### puppetserver
+#### puppetserver (Puppet Server)
 
 This VM have installed the Puppet Server 2.1.3 and Puppet Agent 1.4.1.
 
@@ -190,4 +192,4 @@ You're very welcome to contribute with this project, before please take a look a
 ### Contributors
 * Adriano Vieira
 * Lauro Silveira
-* Marco Tulio R Braga (https://github.com/mtulio)
+
