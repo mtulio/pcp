@@ -172,14 +172,14 @@ sudo -i mco find
 
 ## License
 
-This project is under [Apache 2.0](#LICENSE) license.
+This project is under [Apache 2.0](./blob/master/LICENSE) license.
 
 ## Development
 
 You're very welcome to contribute with this project, before please take a look at these pages:
-* [Contributing page](#CONTRIBUTING.md)
-* [README page](#README)
-* [Issues page](https://github.com/gutocarvalho/pcp/issues)
+* [Contributing page](./blob/master/CONTRIBUTING.md)
+* [README page](./blob/master/README)
+* [Issues page](./issues)
 
 ## Credits
 ### Authors
