@@ -1,4 +1,4 @@
-# PCP - Puppet Configuration Platform
+# PCP - Puppet Community Platform
 
 PCP project provides an completely Puppet 4x Platform installed and configured to be used as you want (labs, tests and modules development)!
 
@@ -10,15 +10,12 @@ PCP project provides an completely Puppet 4x Platform installed and configured t
 * [Requirement](#requirement)
 * [Environment](#environment)
  * [Virtual Machines](#virtual-machines)
-  * [Puppet Server](#puppetserver-puppet-server)
-  * [Puppet Explorer](#puppetserver-puppet-explorer)
-  * [Puppet Mcollective](#puppetserver-mcollective)
  * [Structure](#structure)
 * [Setup](#setup)
  * [Vagrant requirements](#vagrant-requirements)
  * [Initial configuration](#initial-configuration)
 * [Usage](#usage)
- * [Puppet Server](#puppet-server)
+ * [Puppet Server](#puppetserver)
  * [Puppet Explorer](#puppetdb)
  * [Mcollective](#puppetmq)
 * [License](#license)
