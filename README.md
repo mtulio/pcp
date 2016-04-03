@@ -172,13 +172,13 @@ sudo -i mco find
 
 ## License
 
-This project is under [Apache 2.0](./blob/master/LICENSE) license.
+This project is under [Apache 2.0](./LICENSE) license.
 
 ## Development
 
 You're very welcome to contribute with this project, before please take a look at these pages:
-* [Contributing page](./blob/master/CONTRIBUTING.md)
-* [README page](./blob/master/README)
+* [Contributing page](./CONTRIBUTING.md)
+* [README page](./README.md)
 * [Issues page](./issues)
 
 ## Credits

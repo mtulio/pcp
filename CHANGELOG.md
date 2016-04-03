@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.0.2
-- Translate [README](./blob/master/README.md) and [CHANGELOG](./blob/master/CHANGELOG.md) to English. Issues: #9 and #10 .
+- Translate [README](./README.md) and [CHANGELOG](./CHANGELOG.md) to English. Issues: #9 and #10 .
 
 ## 1.0.1
 - R10k Support
